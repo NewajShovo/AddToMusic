@@ -24,9 +24,6 @@
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder ];
-    if (self) {
-        [self designBtn];
-    }
     return self;
 }
 
@@ -34,18 +31,31 @@
 {
     NSLog(@"HELLO0000");
     
-    [_splitBtn.layer setBorderWidth:1.0];
-    [_cutBtn.layer setBorderWidth:1.0];
-    [_trimBtn.layer setBorderWidth:1.0];
-    _splitBtn.layer.borderColor = [UIColor colorWithRed:77.0 / 255.0 green:77.0 / 255.0 blue:77.0 / 255.0 alpha:1.0].CGColor;
-    _cutBtn.layer.borderColor = [UIColor colorWithRed:77.0 / 255.0 green:77.0 / 255.0 blue:77.0 / 255.0 alpha:1.0].CGColor;
-    _trimBtn.layer.borderColor = [UIColor colorWithRed:77.0 / 255.0 green:77.0 / 255.0 blue:77.0 / 255.0 alpha:1.0].CGColor;
-     TrimView.layerClass
-    _splitBtn.clipsToBounds=YES;
+    self.TrimView.layer.cornerRadius=1.15;
+    self.TrimView.layer.masksToBounds=YES;
+ 
+    
+}
+- (IBAction)TrimbtnPressed:(id)sender {
+
+    UIButton *btn = (UIButton*)sender;
+    [btn setBackgroundColor:[UIColor colorWithRed:77.0 / 255.0 green:77.0 / 255.0 blue:77.0 / 255.0 alpha:1.0]];
+    [_cutBtn setBackgroundColor:[UIColor colorWithRed:41.0 / 255.0 green:41.0 / 255.0 blue:41.0 / 255.0 alpha:1.0]];
+    [_splitBtn setBackgroundColor:[UIColor colorWithRed:41.0 / 255.0 green:41.0 / 255.0 blue:41.0 / 255.0 alpha:1.0]];
     
     
-    
-    
+}
+- (IBAction)CutbtnPressed:(id)sender {
+    UIButton *btn = (UIButton*)sender;
+    [btn setBackgroundColor:[UIColor colorWithRed:77.0 / 255.0 green:77.0 / 255.0 blue:77.0 / 255.0 alpha:1.0]];
+    [_trimBtn setBackgroundColor:[UIColor colorWithRed:41.0 / 255.0 green:41.0 / 255.0 blue:41.0 / 255.0 alpha:1.0]];
+    [_splitBtn setBackgroundColor:[UIColor colorWithRed:41.0 / 255.0 green:41.0 / 255.0 blue:41.0 / 255.0 alpha:1.0]];
+}
+- (IBAction)splitbtnPressed:(id)sender {
+    UIButton *btn = (UIButton*)sender;
+    [btn setBackgroundColor:[UIColor colorWithRed:77.0 / 255.0 green:77.0 / 255.0 blue:77.0 / 255.0 alpha:1.0]];
+    [_trimBtn setBackgroundColor:[UIColor colorWithRed:41.0 / 255.0 green:41.0 / 255.0 blue:41.0 / 255.0 alpha:1.0]];
+    [_cutBtn setBackgroundColor:[UIColor colorWithRed:41.0 / 255.0 green:41.0 / 255.0 blue:41.0 / 255.0 alpha:1.0]];
 }
 
 @end

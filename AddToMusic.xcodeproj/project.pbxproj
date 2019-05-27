@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A008CAEA229B95580080BE4D /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = A008CAE8229B95580080BE4D /* CanvasView.m */; };
+		A008CAEB229B95580080BE4D /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A008CAE9229B95580080BE4D /* CanvasView.xib */; };
 		A00C39C9229A457F0041AA99 /* TrimView.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C39C7229A457F0041AA99 /* TrimView.m */; };
 		A00C39CA229A457F0041AA99 /* TrimView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00C39C8229A457F0041AA99 /* TrimView.xib */; };
 		A00C39D0229A479D0041AA99 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C39CF229A479D0041AA99 /* Test.m */; };
-		A00C39D3229A66BC0041AA99 /* segmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C39D2229A66BC0041AA99 /* segmentedControl.m */; };
 		A027AF112296975A00433B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A027AF102296975A00433B61 /* AppDelegate.m */; };
 		A027AF142296975A00433B61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A027AF132296975A00433B61 /* ViewController.m */; };
 		A027AF172296975A00433B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A027AF152296975A00433B61 /* Main.storyboard */; };
@@ -39,13 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A008CAE7229B95580080BE4D /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		A008CAE8229B95580080BE4D /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		A008CAE9229B95580080BE4D /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
 		A00C39C6229A457F0041AA99 /* TrimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrimView.h; sourceTree = "<group>"; };
 		A00C39C7229A457F0041AA99 /* TrimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrimView.m; sourceTree = "<group>"; };
 		A00C39C8229A457F0041AA99 /* TrimView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrimView.xib; sourceTree = "<group>"; };
 		A00C39CE229A479D0041AA99 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		A00C39CF229A479D0041AA99 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
-		A00C39D1229A66BC0041AA99 /* segmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = segmentedControl.h; sourceTree = "<group>"; };
-		A00C39D2229A66BC0041AA99 /* segmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = segmentedControl.m; sourceTree = "<group>"; };
 		A027AF0C2296975A00433B61 /* AddToMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddToMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A027AF0F2296975A00433B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A027AF102296975A00433B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,8 +122,9 @@
 				A00C39C6229A457F0041AA99 /* TrimView.h */,
 				A00C39C7229A457F0041AA99 /* TrimView.m */,
 				A00C39C8229A457F0041AA99 /* TrimView.xib */,
-				A00C39D1229A66BC0041AA99 /* segmentedControl.h */,
-				A00C39D2229A66BC0041AA99 /* segmentedControl.m */,
+				A008CAE7229B95580080BE4D /* CanvasView.h */,
+				A008CAE8229B95580080BE4D /* CanvasView.m */,
+				A008CAE9229B95580080BE4D /* CanvasView.xib */,
 				A027AF182296975C00433B61 /* Assets.xcassets */,
 				A027AF1A2296975C00433B61 /* LaunchScreen.storyboard */,
 				A00C39CE229A479D0041AA99 /* Test.h */,
@@ -257,6 +260,7 @@
 				A027AF1C2296975C00433B61 /* LaunchScreen.storyboard in Resources */,
 				A027AF192296975C00433B61 /* Assets.xcassets in Resources */,
 				A027AF172296975A00433B61 /* Main.storyboard in Resources */,
+				A008CAEB229B95580080BE4D /* CanvasView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +289,7 @@
 				A00C39C9229A457F0041AA99 /* TrimView.m in Sources */,
 				A027AF142296975A00433B61 /* ViewController.m in Sources */,
 				A027AF1F2296975C00433B61 /* main.m in Sources */,
-				A00C39D3229A66BC0041AA99 /* segmentedControl.m in Sources */,
+				A008CAEA229B95580080BE4D /* CanvasView.m in Sources */,
 				A027AF112296975A00433B61 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

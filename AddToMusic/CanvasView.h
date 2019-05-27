@@ -1,8 +1,8 @@
 //
-//  segmentedControl.h
+//  CanvasView.h
 //  AddToMusic
 //
-//  Created by leo on 26/5/19.
+//  Created by leo on 27/5/19.
 //  Copyright © 2019 Shafiq Shovo. All rights reserved.
 //
 
@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface segmentedControl : UISegmentedControl
+@interface CanvasView : UIView
+
 
 @end
 

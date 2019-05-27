@@ -8,6 +8,7 @@
 
 #import "Test.h"
 #import "TrimView.h"
+#import "CanvasView.h"
 
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
@@ -19,6 +20,7 @@
 @interface Test ()
 {
 TrimView *mTrimView;
+    CanvasView *mCanvasView;
 UIView *presentedView;
 
     IBOutlet UIView *coverView;
@@ -46,8 +48,14 @@ UIView *presentedView;
     
     mTrimView = [self loadFromNib:@"TrimView" classToLoad:[TrimView class]];
     mTrimView.frame = CGRectMake(0, SCREEN_HEIGHT, _containerView.frame.size.width, _containerView.frame.size.height);
-    [coverView addSubview:mTrimView];
+    [temporaryView addSubview:mTrimView];
     [mTrimView updateConstraintsIfNeeded];
+    
+    
+    mCanvasView = [self loadFromNib:@"CanvasView" classToLoad:[CanvasView class]];
+    mCanvasView.frame = CGRectMake(0, SCREEN_HEIGHT, _containerView.frame.size.width, _containerView.frame.size.height);
+    [temporaryView addSubview:mCanvasView];
+    [mCanvasView updateConstraintsIfNeeded];
 
 }
 
@@ -60,17 +68,16 @@ UIView *presentedView;
     }
     return nil;
 }
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+      if(item.tag==1) [self AnimateView:mCanvasView];
+      else if(item.tag==0) [self AnimateView:mTrimView];
+}
 
-- (IBAction)ButtonClicked:(id)sender {
-    [self AnimateView:mTrimView];
-}
-- (IBAction)ndButtonClicked:(id)sender {
-    [self AnimateView:mTrimView];
-}
 
 - (void) AnimateView:(UIView*)view{
     [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
-        [self->presentedView setFrame:CGRectMake(0, SCREEN_HEIGHT-100, self->presentedView.frame.size.width, self->presentedView.frame.size.height)];
+        [self->presentedView setFrame:CGRectMake(0, SCREEN_HEIGHT, self->presentedView.frame.size.width, self->presentedView.frame.size.height)];
         [view setFrame:self->_containerView.frame];
     } completion:^(BOOL finished) {
         if (finished) {

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CanvasView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CanvasView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hI1-Ki-fMs">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="two-aE-NvQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="two-aE-NvQ" secondAttribute="height" multiplier="414:25" id="wGs-mD-poV"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HsV-d3-svd" userLabel="sliderView">
+                            <rect key="frame" x="29.666666666666657" y="25" width="355" height="38"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="HsV-d3-svd" secondAttribute="height" multiplier="355:38" id="9BO-aE-S4D"/>
+                            </constraints>
+                        </view>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m82-s6-4G9">
+                            <rect key="frame" x="69" y="29" width="276" height="30"/>
+                            <color key="tintColor" red="1" green="0.49019607843137253" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="two-aE-NvQ" firstAttribute="top" secondItem="hI1-Ki-fMs" secondAttribute="top" id="31b-ZD-8PF"/>
+                        <constraint firstItem="HsV-d3-svd" firstAttribute="centerX" secondItem="hI1-Ki-fMs" secondAttribute="centerX" id="7gk-vv-dGH"/>
+                        <constraint firstItem="HsV-d3-svd" firstAttribute="top" secondItem="two-aE-NvQ" secondAttribute="bottom" id="Acv-VC-QPa"/>
+                        <constraint firstItem="HsV-d3-svd" firstAttribute="bottom" secondItem="m82-s6-4G9" secondAttribute="bottom" constant="5" id="QYT-Xb-Yu1"/>
+                        <constraint firstAttribute="trailing" secondItem="m82-s6-4G9" secondAttribute="trailing" constant="71" id="Qal-9O-Yz5"/>
+                        <constraint firstAttribute="trailing" secondItem="two-aE-NvQ" secondAttribute="trailing" id="R20-rC-EL1"/>
+                        <constraint firstItem="HsV-d3-svd" firstAttribute="width" secondItem="hI1-Ki-fMs" secondAttribute="width" multiplier="355/414" id="Rz4-0a-JfR"/>
+                        <constraint firstItem="two-aE-NvQ" firstAttribute="leading" secondItem="hI1-Ki-fMs" secondAttribute="leading" id="ihx-In-iaB"/>
+                        <constraint firstItem="m82-s6-4G9" firstAttribute="top" secondItem="two-aE-NvQ" secondAttribute="bottom" constant="4" id="um4-qx-KRu"/>
+                        <constraint firstItem="m82-s6-4G9" firstAttribute="leading" secondItem="HsV-d3-svd" secondAttribute="leading" constant="41.333333333333343" id="zeX-4z-evL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hI1-Ki-fMs" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="0Zy-YV-jwW"/>
+                <constraint firstItem="hI1-Ki-fMs" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="1QC-8J-kQ9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="hI1-Ki-fMs" secondAttribute="bottom" id="mIq-is-oii"/>
+                <constraint firstItem="hI1-Ki-fMs" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="vUq-9x-hCF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="153.62318840579712" y="-14.673913043478262"/>
+        </view>
+    </objects>
+</document>
