@@ -7,6 +7,7 @@
 //
 
 #import "CanvasView.h"
+#import "Test.h"
 
 @interface CanvasView ()
 
@@ -14,13 +15,26 @@
 
 @implementation CanvasView
 -(void)awakeFromNib{
-//    [self designBtn];
+    Test *temp = [[Test alloc]init];
+    NSLog(@"%f",temp.PlayerView.frame.size.height);
     [super awakeFromNib];
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder ];
     return self;
+}
+- (IBAction)firstRationBtnClicked:(id)sender {
+
+    [self.delegate canvasViewChange];
+    
+    NSLog(@"HELLO");
+    
+}
+- (IBAction)secondRationBtnClicked:(id)sender {
+
+}
+- (IBAction)thirdRatioBtnClicked:(id)sender {
 }
 
 @end

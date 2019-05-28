@@ -41,7 +41,7 @@
                                                     <tabBarItem title="Trim" id="9s9-u3-rJH"/>
                                                     <tabBarItem tag="1" title="Canvas" id="dAj-wE-kwV"/>
                                                     <tabBarItem tag="2" title="Item1" id="1gM-EK-5z8"/>
-                                                    <tabBarItem tag="3" title="Item2" id="ri2-rf-JJA"/>
+                                                    <tabBarItem tag="3" title="Item" id="ri2-rf-JJA"/>
                                                     <tabBarItem tag="4" systemItem="favorites" id="QFa-Gw-L2o"/>
                                                     <tabBarItem tag="5" systemItem="more" id="0Sp-P3-jO4"/>
                                                 </items>
@@ -83,30 +83,21 @@
                                     <constraint firstItem="tkW-xi-bjY" firstAttribute="top" secondItem="WaF-7s-ju7" secondAttribute="bottom" id="y5F-vF-TEx"/>
                                 </constraints>
                             </view>
-                            <view tag="535" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zG1-Cv-6W0">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zG1-Cv-6W0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0be-NW-VHJ"/>
                             <constraint firstItem="YfM-pX-mEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Feu-iJ-iaO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zG1-Cv-6W0" secondAttribute="bottom" constant="49" id="IkK-cf-duU"/>
                             <constraint firstItem="YfM-pX-mEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UYv-24-HaK"/>
-                            <constraint firstItem="zG1-Cv-6W0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b2k-3T-rac"/>
                             <constraint firstItem="YfM-pX-mEh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cdU-QS-p1h"/>
                             <constraint firstItem="YfM-pX-mEh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rNL-RL-LgZ"/>
-                            <constraint firstItem="zG1-Cv-6W0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uLh-vr-a3A"/>
-                            <constraint firstItem="zG1-Cv-6W0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wqC-BJ-3Ju"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="lHZ-v5-z5E"/>
                     <connections>
+                        <outlet property="PlayerView" destination="WaF-7s-ju7" id="6Lf-aS-nCb"/>
                         <outlet property="containerView" destination="tkW-xi-bjY" id="wqd-9K-QS2"/>
                         <outlet property="coverView" destination="YfM-pX-mEh" id="uaw-Wl-YyH"/>
-                        <outlet property="temporaryView" destination="zG1-Cv-6W0" id="0uD-Qb-Xkc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

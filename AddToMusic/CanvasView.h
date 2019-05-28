@@ -10,8 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CanvasViewDelegate <NSObject>
+
+-(void) canvasViewChange;
+
+@end
+
+
+
+
 @interface CanvasView : UIView
 
+@property (nonatomic,strong) IBOutlet id <CanvasViewDelegate> delegate;
 
 @end
 

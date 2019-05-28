@@ -37,17 +37,69 @@
                             <rect key="frame" x="69" y="29" width="276" height="30"/>
                             <color key="tintColor" red="1" green="0.49019607843137253" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         </slider>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-SY-DOf">
+                            <rect key="frame" x="0.0" y="170" width="414" height="14"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="sbP-SY-DOf" secondAttribute="height" multiplier="207:7" id="PAv-t0-5zr"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErR-Rm-Ia8">
+                            <rect key="frame" x="16" y="100" width="60" height="70"/>
+                            <color key="backgroundColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ErR-Rm-Ia8" secondAttribute="height" multiplier="6:7" id="8MX-eT-E5q"/>
+                            </constraints>
+                            <state key="normal" title="3:5"/>
+                            <connections>
+                                <action selector="firstRationBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="5sj-sY-ywI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-uf-Dvy">
+                            <rect key="frame" x="86" y="110" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="JB9-uf-Dvy" secondAttribute="height" multiplier="1:1" id="lNY-kS-F1P"/>
+                            </constraints>
+                            <state key="normal" title="1:1"/>
+                            <connections>
+                                <action selector="secondRationBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="vtR-3W-7Vt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdS-Ju-GOY">
+                            <rect key="frame" x="156" y="106" width="51" height="64"/>
+                            <color key="backgroundColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="CdS-Ju-GOY" secondAttribute="height" multiplier="51:64" id="tWB-0h-nuI"/>
+                            </constraints>
+                            <state key="normal" title="4:5"/>
+                            <connections>
+                                <action selector="thirdRatioBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="pIe-ed-n93"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="two-aE-NvQ" firstAttribute="top" secondItem="hI1-Ki-fMs" secondAttribute="top" id="31b-ZD-8PF"/>
                         <constraint firstItem="HsV-d3-svd" firstAttribute="centerX" secondItem="hI1-Ki-fMs" secondAttribute="centerX" id="7gk-vv-dGH"/>
                         <constraint firstItem="HsV-d3-svd" firstAttribute="top" secondItem="two-aE-NvQ" secondAttribute="bottom" id="Acv-VC-QPa"/>
+                        <constraint firstAttribute="bottom" secondItem="sbP-SY-DOf" secondAttribute="bottom" id="B0v-ox-wp1"/>
+                        <constraint firstAttribute="trailing" secondItem="sbP-SY-DOf" secondAttribute="trailing" id="Gpb-0V-kPn"/>
+                        <constraint firstItem="sbP-SY-DOf" firstAttribute="top" secondItem="CdS-Ju-GOY" secondAttribute="bottom" id="O2M-YO-sbH"/>
                         <constraint firstItem="HsV-d3-svd" firstAttribute="bottom" secondItem="m82-s6-4G9" secondAttribute="bottom" constant="5" id="QYT-Xb-Yu1"/>
                         <constraint firstAttribute="trailing" secondItem="m82-s6-4G9" secondAttribute="trailing" constant="71" id="Qal-9O-Yz5"/>
+                        <constraint firstItem="CdS-Ju-GOY" firstAttribute="width" secondItem="hI1-Ki-fMs" secondAttribute="width" multiplier="51/414" id="R1a-Xq-ZZF"/>
                         <constraint firstAttribute="trailing" secondItem="two-aE-NvQ" secondAttribute="trailing" id="R20-rC-EL1"/>
                         <constraint firstItem="HsV-d3-svd" firstAttribute="width" secondItem="hI1-Ki-fMs" secondAttribute="width" multiplier="355/414" id="Rz4-0a-JfR"/>
+                        <constraint firstItem="sbP-SY-DOf" firstAttribute="top" secondItem="JB9-uf-Dvy" secondAttribute="bottom" id="T6D-MA-igR"/>
+                        <constraint firstItem="ErR-Rm-Ia8" firstAttribute="leading" secondItem="hI1-Ki-fMs" secondAttribute="leading" constant="16" id="TN7-F8-8MC"/>
+                        <constraint firstItem="sbP-SY-DOf" firstAttribute="leading" secondItem="hI1-Ki-fMs" secondAttribute="leading" id="VjR-aq-T5g"/>
+                        <constraint firstItem="JB9-uf-Dvy" firstAttribute="width" secondItem="hI1-Ki-fMs" secondAttribute="width" multiplier="60/414" id="cfA-Eg-Bqr"/>
+                        <constraint firstItem="ErR-Rm-Ia8" firstAttribute="width" secondItem="hI1-Ki-fMs" secondAttribute="width" multiplier="60/414" id="dqZ-D9-KGa"/>
+                        <constraint firstItem="CdS-Ju-GOY" firstAttribute="leading" secondItem="JB9-uf-Dvy" secondAttribute="trailing" constant="10" id="fVx-So-zxh"/>
                         <constraint firstItem="two-aE-NvQ" firstAttribute="leading" secondItem="hI1-Ki-fMs" secondAttribute="leading" id="ihx-In-iaB"/>
+                        <constraint firstItem="sbP-SY-DOf" firstAttribute="top" secondItem="ErR-Rm-Ia8" secondAttribute="bottom" id="jDO-mg-Ldh"/>
+                        <constraint firstItem="JB9-uf-Dvy" firstAttribute="leading" secondItem="ErR-Rm-Ia8" secondAttribute="trailing" constant="10" id="kz5-6c-cO7"/>
                         <constraint firstItem="m82-s6-4G9" firstAttribute="top" secondItem="two-aE-NvQ" secondAttribute="bottom" constant="4" id="um4-qx-KRu"/>
                         <constraint firstItem="m82-s6-4G9" firstAttribute="leading" secondItem="HsV-d3-svd" secondAttribute="leading" constant="41.333333333333343" id="zeX-4z-evL"/>
                     </constraints>
@@ -62,7 +114,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="153.62318840579712" y="-14.673913043478262"/>
+            <point key="canvasLocation" x="155.07246376811597" y="-21.195652173913047"/>
         </view>
     </objects>
 </document>

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CanvasView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Test : UIViewController
+@interface Test : UIViewController <CanvasViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *containerView;
+@property (strong, nonatomic) IBOutlet UIView *PlayerView;
 
 @end
 

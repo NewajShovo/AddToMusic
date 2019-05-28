@@ -23,8 +23,9 @@ TrimView *mTrimView;
     CanvasView *mCanvasView;
 UIView *presentedView;
 
+    IBOutlet UIView *PlayerView;
     IBOutlet UIView *coverView;
-    IBOutlet UIView *temporaryView;
+//    IBOutlet UIView *temporaryView;
 }
 @end
 
@@ -36,9 +37,8 @@ UIView *presentedView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    TrimView *obj=[[TrimView alloc]init];
-//    obj.designBtn;
-    
+    CanvasView *obj = [[ CanvasView alloc]init];
+    obj.delegate = self; 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self LoadView];
     });
@@ -48,15 +48,21 @@ UIView *presentedView;
     
     mTrimView = [self loadFromNib:@"TrimView" classToLoad:[TrimView class]];
     mTrimView.frame = CGRectMake(0, SCREEN_HEIGHT, _containerView.frame.size.width, _containerView.frame.size.height);
-    [temporaryView addSubview:mTrimView];
+    
+    NSLog(@"%f %f",_PlayerView.frame.size.height,_PlayerView.frame.size.width);
+    
+    [coverView addSubview:mTrimView];
     [mTrimView updateConstraintsIfNeeded];
     
     
     mCanvasView = [self loadFromNib:@"CanvasView" classToLoad:[CanvasView class]];
     mCanvasView.frame = CGRectMake(0, SCREEN_HEIGHT, _containerView.frame.size.width, _containerView.frame.size.height);
-    [temporaryView addSubview:mCanvasView];
+    [coverView addSubview:mCanvasView];
     [mCanvasView updateConstraintsIfNeeded];
-
+    
+    //First View taken
+    [self AnimateView:mTrimView];
+    
 }
 
 - (id)loadFromNib:(NSString *)name classToLoad:(Class)classToLoad {
@@ -86,6 +92,11 @@ UIView *presentedView;
     }];
 }
 
+
+-(void) canvasViewChange
+{
+    NSLog(@"YESS");
+}
 /*
 #pragma mark - Navigation
 
