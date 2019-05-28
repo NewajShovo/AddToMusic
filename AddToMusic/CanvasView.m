@@ -14,9 +14,10 @@
 @end
 
 @implementation CanvasView
+
+
 -(void)awakeFromNib{
-    Test *temp = [[Test alloc]init];
-    NSLog(@"%f",temp.PlayerView.frame.size.height);
+    
     [super awakeFromNib];
 }
 
@@ -26,10 +27,13 @@
 }
 - (IBAction)firstRationBtnClicked:(id)sender {
 
-    [self.delegate canvasViewChange];
-    
-    NSLog(@"HELLO");
-    
+    NSLog(@"Hello");
+    if(self.delegate!=nil){
+        NSLog(@"I am in");
+        if ([self.delegate respondsToSelector:@selector(canvasViewChange)]) {
+            [self.delegate canvasViewChange];
+        }
+    }
 }
 - (IBAction)secondRationBtnClicked:(id)sender {
 

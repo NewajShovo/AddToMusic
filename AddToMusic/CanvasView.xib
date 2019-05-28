@@ -39,7 +39,7 @@
                         </slider>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-SY-DOf">
                             <rect key="frame" x="0.0" y="170" width="414" height="14"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="sbP-SY-DOf" secondAttribute="height" multiplier="207:7" id="PAv-t0-5zr"/>
                             </constraints>

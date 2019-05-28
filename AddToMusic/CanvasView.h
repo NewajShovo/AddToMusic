@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
 
-@property (nonatomic,strong) IBOutlet id <CanvasViewDelegate> delegate;
+@property (weak,nonatomic) id < CanvasViewDelegate > delegate;
 
 @end
 

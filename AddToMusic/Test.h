@@ -11,9 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Test : UIViewController <CanvasViewDelegate>
-@property (strong, nonatomic) IBOutlet UIView *containerView;
-@property (strong, nonatomic) IBOutlet UIView *PlayerView;
+@interface Test : UIViewController < CanvasViewDelegate >
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIView *PlayerView;
+
 
 @end
 

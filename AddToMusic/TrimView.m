@@ -15,7 +15,37 @@
 @property (strong, nonatomic) IBOutlet UIView *TrimView;
 
 @end
-
+//-(void) asdf{
+//    NSLog(@"HELLO");
+//    
+//}
+//-(void) canvasViewChange:(NSInteger) value
+//{
+//    if( value==1 ){
+//        [ Test ratioThreeToFive];
+//    }
+//    else if( value==2 )
+//    {
+//        [Test ratioOneToOne];
+//    }
+//    else if( value==3 )
+//    {
+//        [Test ratioFourToFive];
+//    }
+//}
+//
+//+( void ) ratioThreeToFive
+//{
+//    NSLog(@"3:5");
+//}
+//+(void) ratioOneToOne
+//{
+//    NSLog(@"1:1");
+//}
+//+(void) ratioFourToFive
+//{
+//    NSLog(@"4:5");
+//}
 @implementation TrimView
 -(void)awakeFromNib{
     [self designBtn];

@@ -19,15 +19,16 @@
 
 @interface Test ()
 {
-TrimView *mTrimView;
+    TrimView *mTrimView;
     CanvasView *mCanvasView;
-UIView *presentedView;
-
+    UIView *presentedView;
+    
     IBOutlet UIView *PlayerView;
     IBOutlet UIView *coverView;
-//    IBOutlet UIView *temporaryView;
+    //    IBOutlet UIView *temporaryView;
 }
 @end
+
 
 @implementation Test
 
@@ -37,8 +38,7 @@ UIView *presentedView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CanvasView *obj = [[ CanvasView alloc]init];
-    obj.delegate = self; 
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self LoadView];
     });
@@ -46,6 +46,7 @@ UIView *presentedView;
 
 - (void) LoadView{
     
+//     _vc.delegate =self;
     mTrimView = [self loadFromNib:@"TrimView" classToLoad:[TrimView class]];
     mTrimView.frame = CGRectMake(0, SCREEN_HEIGHT, _containerView.frame.size.width, _containerView.frame.size.height);
     
@@ -59,6 +60,7 @@ UIView *presentedView;
     mCanvasView.frame = CGRectMake(0, SCREEN_HEIGHT, _containerView.frame.size.width, _containerView.frame.size.height);
     [coverView addSubview:mCanvasView];
     [mCanvasView updateConstraintsIfNeeded];
+    mCanvasView.delegate = (id)self;
     
     //First View taken
     [self AnimateView:mTrimView];
